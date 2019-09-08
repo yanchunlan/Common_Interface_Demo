@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".BActivity">
+
+    <TextView
+        android:id="@+id/tvShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="tvShow" />
+
+    <Button
+        android:id="@+id/btnFuncton01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用方法1" />
+
+    <Button
+        android:id="@+id/btnFuncton02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用方法2" />
+
+    <Button
+        android:id="@+id/btnFuncton03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用方法3" />
+
+
+    <Button
+        android:id="@+id/btnFuncton04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用方法4" />
+
+    <Button
+        android:id="@+id/btnCloseB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭B" />
+
+
+</LinearLayout>
