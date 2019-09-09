@@ -1,17 +1,17 @@
 package com.example.common_interface_demo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.library.FunctionHasParamHasResult;
 import com.example.library.FunctionHasParamNoResult;
 import com.example.library.FunctionManager;
 import com.example.library.FunctionNoParamHasResult;
 import com.example.library.FunctionNoParamNoResult;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class AActivity extends AppCompatActivity {
 
@@ -45,13 +45,15 @@ public class AActivity extends AppCompatActivity {
         FunctionManager.getInstance().addFunction(new FunctionHasParamNoResult<String>(FunctionManager.FUNCTIONHASPARAMNORESULT) {
             @Override
             public void function(String s) {
-                tvShow.setText(s);
+                tvShow.setText("调用了方法3,");
+                tvShow.append(s);
             }
         });
 
         FunctionManager.getInstance().addFunction(new FunctionHasParamHasResult<String, String>(FunctionManager.FUNCTIONHASPARAMHASRESULT) {
             @Override
             public String function(String s) {
+                tvShow.setText("调用了方法4,");
                 tvShow.setText(s);
                 return s;
             }

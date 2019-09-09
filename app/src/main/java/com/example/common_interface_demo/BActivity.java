@@ -5,9 +5,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.library.FunctionManager;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.library.FunctionManager;
 
 public class BActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,15 +45,19 @@ public class BActivity extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.btnFuncton01:
                 FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONNOPARAMNORESULT);
+                tvShow.setText("调用了方法1");
                 break;
             case R.id.btnFuncton02:
-                tvShow.setText(FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONNOPARAMHASRESULT, String.class));
+                FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONNOPARAMHASRESULT, String.class);
+                tvShow.setText("调用了方法2");
                 break;
             case R.id.btnFuncton03:
                 FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONHASPARAMNORESULT, "调用了方法3,有参数无返回值类型方法");
+                tvShow.setText("调用了方法3");
                 break;
             case R.id.btnFuncton04:
-                tvShow.setText(FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONHASPARAMHASRESULT, "调用了方法4,有参数有返回值类型方法", String.class));
+                FunctionManager.getInstance().invokeFunction(FunctionManager.FUNCTIONHASPARAMHASRESULT, "调用了方法4,有参数有返回值类型方法", String.class);
+                tvShow.setText("调用了方法4");
                 break;
             case R.id.btnCloseB:
                 finish();
